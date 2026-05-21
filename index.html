@@ -1,4 +1,7 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style id="kami-ov-theme">
 html[data-theme="glass"]{
   --ov-bg:rgba(255,255,255,.75);
   --ov-text:#1d1d1f;
@@ -46,9 +49,8 @@ html[data-theme="metro"]{
   --ov-cta-bg:#0078d4;
   --ov-cta-text:#fff;
   --ov-dot:#0078d4;
-}<!DOCTYPE html>
-<html lang="en">
-<head>
+}
+</style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>kaleidoscopic</title>
@@ -124,7 +126,7 @@ body{
 /* ─── TOP BAR ─────────────────────────────────── */
 #topbar{
   height:var(--tbh);flex-shrink:0;
-  display:flex;align-items:center;
+  display:flex;align-items:center;justify-content:flex-end;
 }
 #title{
   font-size:clamp(.6rem,.88vw,.8rem);font-weight:300;
@@ -397,9 +399,9 @@ canvas{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:non
 <body>
 
 <div id="main">
-  <div id="topbar">
-    <div id="title">kaleidoscopic</div>
-    <div id="tagline">eight symmetries, infinite forms</div>
+  <!-- title/tagline come from the injected kami-header; keep only the action
+       buttons here so there's no duplicate header. -->
+  <div id="topbar" class="kami-has-global-header">
     <div id="topright">
       <button class="topbtn" id="btnHelp">?&thinsp;<span class="kbk">[9]</span></button>
       <button class="topbtn" id="btnSave">save&thinsp;<span class="kbk">[`]</span></button>
